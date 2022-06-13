@@ -51,7 +51,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           case 'customer.subscriptions.created': 
           case 'customer.subscriptions.updated': 
           case 'customer.subscriptions.deleted':
-
             const subscription = event.data.object as Stripe.Subscription;
 
             await saveSubscription(
